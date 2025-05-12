@@ -51,6 +51,23 @@ function eliminarTitulo(){
     }
 }
 
+//e = objeto event de js
+// simepre que se trabaja con formularios se usa e
+function mostrarNombre(e){
+    e.preventDefault(); //evitar que recargue la pagina
+    const parrafo = document.getElementById('parrafoNombre')
+    const inputNombre = document.querySelector('input')
+    console.log(parrafo)
+    console.log(inputNombre)
+    console.log(inputNombre.value) // accede al texto del input
+    // console.log(formulario.children[0].children[1])
+    //buscar texto escrito en el formulario
+
+    // mostrar el texto
+    // parrafo.textContent = parrafo.textContent + ' '+inputNombre.value
+    parrafo.textContent +=' '+inputNombre.value
+}
+
 
 //====================== LOGICA ====================
 //ver metodo toggle para el ejercicio agregar o borrar si la clase esta o no
@@ -67,8 +84,12 @@ console.log(btnCambiarTitulo)
 const btnEliminar = document.getElementById('btnEliminar')
 console.log(btnEliminar)
 
+const formulario = document.querySelector('form')
+console.log(formulario)
+
 //querySelectorAll: trae un array de objetos
 
 //agregar un manejador de eventos
 btnCambiarTitulo.addEventListener('click', modificarTituloConInnerHTML)
 btnEliminar.addEventListener('click',eliminarTitulo)
+formulario.addEventListener('submit',mostrarNombre)
