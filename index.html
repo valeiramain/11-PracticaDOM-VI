@@ -22,7 +22,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <button clas="btn">
+                    <button type="button" class="btn btn-secondary">
                         <i class="bi bi-circle-half"></i> Cambiar Tema
                     </button>
                 </div>
@@ -38,19 +38,19 @@
 
         <section>
             <h2>Selección de elementos</h2>
-            <p>Métdos del objeto document</p>
+            <p>Métodos del objeto document</p>
             <ul>
                 <li><code>getElementById('id')</code>→ Selecciona por ID.</li>
                 <li><code>getElementsByClassName('clase')</code> → Devuelve colección HTML.</li>
-                <li>getElementsByTagName('tag') → Devuelve por tipo de etiqueta.</li>
-                <li>querySelector('selector') → Devuelve el primer elemento que coincide.</li>
-                <li>querySelectorAll('selector') → Devuelve todos los que coinciden.</li>
+                <li><code>getElementsByTagName('tag')</code> → Devuelve por tipo de etiqueta.</li>
+                <li><code>querySelector('selector')</code> → Devuelve el primer elemento que coincide.</li>
+                <li><code>querySelectorAll('selector')</code> → Devuelve todos los que coinciden.</li>
             </ul>
 
             <h3>Modificar contenido:</h3>
             <ul>
                 <li><code>textContent</code> agrega texto plano (más seguro).</li>
-                <li>xinnerHTML interpreta HTML ( vulnerable a XSS si no se controla).</li>
+                <li><code>xinnerHTML</code> interpreta HTML ( vulnerable a XSS si no se controla).</li>
                 <li></li>
             </ul>
 
@@ -63,14 +63,14 @@
         </section>
 
         <section class="my-4">
-            <h2 class="display-5 text-center ">Practica de DOM</h2>
+            <h2 class="display-5 text-center mb-3">Practica de DOM</h2>
             <div class="row">
                 <div class="col-12 col-md-12 col-lg-3">
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title" id="titulo">Hola Mundo</h5>
-                            <button class="btn btn-warning w-100 mt-3" onclick="modificarTitulo()">Cambiat el titulo</button>
-                            <button class="btn btn-outline-warning w-100 mt-3" id="btnCambiarTituloInnerHTML">Cambiat el titulo con innerHTML</button>
+                            <button class="btn btn-warning w-100 mt-3" onclick="modificarTitulo()">Cambiar el titulo</button>
+                            <button class="btn btn-outline-warning w-100 mt-3" id="btnCambiarTituloInnerHTML">Cambiar el titulo con innerHTML</button>
                         </div>
                     </div>
                 </div>
