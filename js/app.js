@@ -68,6 +68,16 @@ function mostrarNombre(e){
     parrafo.textContent +=' '+inputNombre.value
 }
 
+function cambiarTheme(){
+    const html = document.documentElement;
+    const themeActual = html.getAttribute('data-bs-theme')
+
+    //operador ternario
+    html.setAttribute('data-bs-theme',themeActual==='dark' ? 'light':'dark')
+    console.log(html.getAttribute('data-bs-theme'))
+    themeActual === 'dark' ? btnCambiarTheme.className = ' btn btn-outline-dark' : btnCambiarTheme.className = ' btn btn-outline-light'
+}
+
 
 //====================== LOGICA ====================
 //ver metodo toggle para el ejercicio agregar o borrar si la clase esta o no

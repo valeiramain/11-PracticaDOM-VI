@@ -14,7 +14,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
+            <div class="container">
                 <a class="navbar-brand" href="index.html">Practica DOM</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -22,7 +22,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <button type="button" class="btn btn-secondary">
+                    <button type="button" class="btn btn-outline-light" id="btnCambiarTheme" onclick="cambiarTheme()">
                         <i class="bi bi-circle-half"></i> Cambiar Tema
                     </button>
                 </div>
@@ -56,10 +56,42 @@
 
             <h3>🎨Manipular clases con classList:</h3>
 
-            <p>classList es una propiedad de los elementos DOM que permite trabajar fácilmente con las clases CSS.
+            <p class="mb-4"><code>classList</code> es una propiedad de los elementos DOM que permite trabajar fácilmente
+                con las clases CSS.
                 Devuelve un objeto con métodos útiles.</p>
 
             <!-- falta classList -->
+            <h3 class="my-4">🧩Métodos comunes de <code>ClassList</code></h3>
+            <table class="table table-striped table-bordered">
+                <thead class="table-primary">
+                    <tr>
+                        <th scope="col">Métodos</th>
+                        <th scope="col">Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>element.classList.add("clase")</code></td>
+                        <td>🟢 Añadir una clase si no está presente</td>
+                    </tr>
+                    <tr>
+                        <td><code>element.classList.remove("clase")</code></td>
+                        <td>🔴Eliminar una clase si está presente</td>
+                    </tr>
+                    <tr>
+                        <td><code>element.classList.toggle("clase")</code></td>
+                        <td>🔁 Alterna una clase: si está la quita, si no está agrega</td>
+                    </tr>
+                    <tr>
+                        <td><code>element.classList.contains("clase")</code></td>
+                        <td>🔍 devuelve <code>true</code> si el elemento tiene la clase</td>
+                    </tr>
+                    <tr>
+                        <td><code>element.classList.replace("clase")</code></td>
+                        <td>🔄️ Reemplaa una clase existente por otra</td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
 
         <section class="my-4">
@@ -69,8 +101,10 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title" id="titulo">Hola Mundo</h5>
-                            <button class="btn btn-warning w-100 mt-3" onclick="modificarTitulo()">Cambiar el titulo</button>
-                            <button class="btn btn-outline-warning w-100 mt-3" id="btnCambiarTituloInnerHTML">Cambiar el titulo con innerHTML</button>
+                            <button class="btn btn-warning w-100 mt-3" onclick="modificarTitulo()">Cambiar el
+                                titulo</button>
+                            <button class="btn btn-outline-warning w-100 mt-3" id="btnCambiarTituloInnerHTML">Cambiar el
+                                titulo con innerHTML</button>
                         </div>
                     </div>
                 </div>
@@ -96,7 +130,8 @@
                             <form>
                                 <div class="mb-3">
                                     <label for="">Escribi tu nombre:</label>
-                                    <input type="text" class="form-control" placeholder="juan perez" minlength="2" maxlength="50" id="nombre" required>
+                                    <input type="text" class="form-control" placeholder="juan perez" minlength="2"
+                                        maxlength="50" id="nombre" required>
                                 </div>
                                 <button class="btn btn-primary w-100" type="submit">mostrar el nombre</button>
                                 <p id="parrafoNombre">tu nombre es: </p>
@@ -105,6 +140,35 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="text-center my-3">
+            <!-- agregar maquetado de un input lista de tareas-->
+
+            <h2 class="mb-3"> 🗒️ Agregar Tareas con JS</h2>
+            <form>
+                <div class="mb-3 d-flex flex-column flex-md-row gap-3">
+                    <input type="text" class="form-control" id="inputTarea"
+                        placeholder="Ej: Terminar TP de DOM y BOM...">
+                        <button class="btn btn-success" type="submit">Agregar tarea</button>
+                </div>
+
+            </form>
+            <article>
+                <table class="table table-bordered text-start">
+                <tbody>
+                    <tr>
+                        <td>Tarea 1</td>
+                    </tr>
+                    <tr>
+                        <td>Tarea 2</td>
+                    </tr>
+                    <tr>
+                        <td>Tarea 3</td>
+                    </tr>
+                </tbody>
+            </table>
+            </article>
         </section>
 
 
