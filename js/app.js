@@ -41,8 +41,34 @@ function ocultarTexto() {
     }
 }
 
+function eliminarTitulo(){
+    const titulo = document.getElementById('tituloEliminar')
+    console.log(titulo)
+    // if (null) => False
+    if (titulo){
+        titulo.remove()
+        btnEliminar.classList.add('disabled')
+    }
+}
+
+
+//====================== LOGICA ====================
+//ver metodo toggle para el ejercicio agregar o borrar si la clase esta o no
+
+// get id: 1 solo elemento
+// getElementby: devuelve array
+//querySelector: espera que le pase como argumentto un selector de CSS. trae solo el primer elemento
+
+//Ocultar titulo y cambiar nombre boton
 const btnCambiarTitulo = document.querySelector('#btnCambiarTituloInnerHTML')
 console.log(btnCambiarTitulo)
 
+//Borrar titulo
+const btnEliminar = document.getElementById('btnEliminar')
+console.log(btnEliminar)
+
+//querySelectorAll: trae un array de objetos
+
 //agregar un manejador de eventos
 btnCambiarTitulo.addEventListener('click', modificarTituloConInnerHTML)
+btnEliminar.addEventListener('click',eliminarTitulo)

@@ -37,7 +37,7 @@
         </section>
 
         <section>
-            <h2>Selección de elementos</h2>
+            <h2>🔍Selección de elementos</h2>
             <p>Métodos del objeto document</p>
             <ul>
                 <li><code>getElementById('id')</code>→ Selecciona por ID.</li>
@@ -47,14 +47,14 @@
                 <li><code>querySelectorAll('selector')</code> → Devuelve todos los que coinciden.</li>
             </ul>
 
-            <h3>Modificar contenido:</h3>
+            <h3>✍️Modificar contenido:</h3>
             <ul>
                 <li><code>textContent</code> agrega texto plano (más seguro).</li>
                 <li><code>xinnerHTML</code> interpreta HTML ( vulnerable a XSS si no se controla).</li>
                 <li></li>
             </ul>
 
-            <h3>Manipular clases con classList:</h3>
+            <h3>🎨Manipular clases con classList:</h3>
 
             <p>classList es una propiedad de los elementos DOM que permite trabajar fácilmente con las clases CSS.
                 Devuelve un objeto con métodos útiles.</p>
@@ -85,8 +85,8 @@
                 <div class="col-12 col-md-12 col-lg-3">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">Eliminar un elemento del HTML</h5>
-                            <button class="btn btn-danger w-100 mt-3">Borrar Titulo</button>
+                            <h5 class="card-title" id="tituloEliminar">Eliminar un elemento del HTML</h5>
+                            <button class="btn btn-danger w-100 mt-3" id="btnEliminar">Borrar Titulo</button>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                             <form>
                                 <div class="mb-3">
                                     <label for="">Escribi tu nombre:</label>
-                                    <input type="text" class="form-control" placeholder="juan perez">
+                                    <input type="text" class="form-control" placeholder="juan perez" minlength="2" maxlength="50" id="nombre" required>
                                 </div>
                                 <button class="btn btn-primary w-100">mostrar el nombre</button>
                                 <p>tu nombre es: </p>
