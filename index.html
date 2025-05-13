@@ -97,18 +97,19 @@
         <section class="my-4">
             <h2 class="display-5 text-center mb-3">Practica de DOM</h2>
             <div class="row">
-                <div class="col-12 col-md-12 col-lg-3">
+                <div class="col-12 col-md-12 col-lg-3 mb-3">
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title" id="titulo">Hola Mundo</h5>
                             <button class="btn btn-warning w-100 mt-3" onclick="modificarTitulo()">Cambiar el
                                 titulo</button>
+                                <!-- agrego  id="btnCambiarTituloInnerHTML" para llevarlo a js y trabajarlo desde alli -->
                             <button class="btn btn-outline-warning w-100 mt-3" id="btnCambiarTituloInnerHTML">Cambiar el
                                 titulo con innerHTML</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-12 col-lg-3">
+                <div class="col-12 col-md-12 col-lg-3 mb-3">
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">Ocultar un elemento del HTML</h5>
@@ -116,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-12 col-lg-3">
+                <div class="col-12 col-md-12 col-lg-3 mb-3">
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title" id="tituloEliminar">Eliminar un elemento del HTML</h5>
@@ -124,7 +125,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-12 col-lg-3">
+                <div class="col-12 col-md-12 col-lg-3 mb-3">
                     <div class="card h-100">
                         <div class="card-body">
                             <form>
@@ -133,7 +134,7 @@
                                     <input type="text" class="form-control" placeholder="juan perez" minlength="2"
                                         maxlength="50" id="nombre" required>
                                 </div>
-                                <button class="btn btn-primary w-100" type="submit">mostrar el nombre</button>
+                                <button class="btn btn-primary w-100" type="submit">Mostrar el nombre</button>
                                 <p id="parrafoNombre">tu nombre es: </p>
                             </form>
                         </div>
